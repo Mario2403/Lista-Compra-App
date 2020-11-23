@@ -1,0 +1,37 @@
+GET http://localhost:8081
+Accept: text/plain
+
+###
+
+GET http://localhost:8081
+Accept: text/plain
+
+###
+
+GET http://localhost:8081/list
+Accept: text/plain
+
+###
+
+GET http://localhost:8080/list
+Accept: text/plain
+
+###
+
+GET http://localhost:8080/list
+Accept: text/plain
+
+###
+
+GET http://localhost:8080/list
+Accept: text/plain
+
+###
+
+GET http://localhost:8080/list
+Accept: application/json
+
+<> 2020-11-04T061248.404.json
+
+###
+
