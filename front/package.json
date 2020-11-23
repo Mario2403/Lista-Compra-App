@@ -13,7 +13,7 @@
     "vuetify": "^2.2.11",
     "vuex": "^3.4.0"
   },
-  "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client",
 
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.5.0",
