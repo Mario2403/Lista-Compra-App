@@ -103,7 +103,7 @@
 							<overwrite>true</overwrite>
 							<resources>
 								<resource>
-									<directory>../front/frontend/target/dist</directory>
+									<directory>../front/target/dist</directory>
 									<includes>
 										<include>static/</include>
 										<include>index.html</include>
