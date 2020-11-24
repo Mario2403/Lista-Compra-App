@@ -24,7 +24,7 @@
     </properties>
 
     <modules>
-        <module>back</module>
         <module>front</module>
+        <module>back</module>
     </modules>
 </project>
