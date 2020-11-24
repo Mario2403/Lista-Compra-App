@@ -27,17 +27,6 @@
                 <artifactId>frontend-maven-plugin</artifactId>
                 <version>1.6</version>
                 <executions>
-                         
-                         <execution>
-                        <id>delete node_modules</id>
-                        <goals>
-                            <goal>rm</goal>
-                        </goals>
-                        <configuration>
-                            <arguments>-rf node_modules</arguments>
-                        </configuration>
-                    </execution>
-                         
                     <!-- Install our node and npm version to run npm/node scripts-->
                     <execution>
                         <id>install node and npm</id>
