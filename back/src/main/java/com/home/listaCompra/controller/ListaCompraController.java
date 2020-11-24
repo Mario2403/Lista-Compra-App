@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ListaCompraController {
 
     @CrossOrigin
-    @PostMapping("/list")
+    @PostMapping("/api/list")
     public String getList(@RequestBody (required = true) String body){
 
 
