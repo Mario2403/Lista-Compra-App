@@ -24,7 +24,7 @@
                   <v-row>
                     <v-col>
                       <v-text-field label="Nombre" v-model="textField">
-                      </v-text-field>
+                     ma </v-text-field>
                     </v-col>
                   </v-row>
                   <v-row>
@@ -90,7 +90,7 @@
               class="no-pad"
               height="20"
             >
-              <CustomListItem v-bind:modelo="child" />
+              <CustomListItem v-bind:modelo="child" :saveElements="saveElements"/>
             </v-list-item>
           </v-list-group>
         </v-list>
@@ -260,7 +260,18 @@
       this.textField = "";
       this.typeSelected = { title: "", icon: "" };
     },
+    saveElements(){
+      console.log("Save elements!")
+      var saveJSON = JSON.stringify(this.grupos);
+      localStorage.setItem("grupos", saveJSON)
+    }
   },
+  mounted() {
+    if(localStorage.getItem("grupos") != undefined){
+      var parsedJSON = JSON.parse(localStorage.getItem("grupos"));
+      this.grupos = parsedJSON;
+    }
+  }
 };
 </script>
 
