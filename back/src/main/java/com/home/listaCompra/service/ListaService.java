@@ -83,7 +83,7 @@ public class ListaService {
             }
         }
 
-        String excelFileName = "E:/backendListaCompra/test1.xlsx";
+        String excelFileName = "./Lista de la compra.xlsx";
         try {
             FileOutputStream fileOut = new FileOutputStream(excelFileName);
             wb.write(fileOut);
@@ -95,6 +95,7 @@ public class ListaService {
         }
 
         //send by email
+        System.out.println("Preparando envio");
         MailService.sendMail(excelFileName);
     }
 

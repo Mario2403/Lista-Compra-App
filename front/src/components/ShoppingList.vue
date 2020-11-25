@@ -245,8 +245,8 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(postBody),
       };
-
-      fetch("http://192.168.1.68:8081/list", reqOptions).then((response) =>
+      console.log(https://lista-compra-casa.herokuapp.com/api/list);
+      fetch("https://lista-compra-casa.herokuapp.com/api/list", reqOptions).then((response) =>
         console.log(response)
       );
     },
