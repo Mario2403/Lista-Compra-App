@@ -245,7 +245,7 @@
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(postBody),
       };
-      console.log(https://lista-compra-casa.herokuapp.com/api/list);
+      console.log("https://lista-compra-casa.herokuapp.com/api/list");
       fetch("https://lista-compra-casa.herokuapp.com/api/list", reqOptions).then((response) =>
         console.log(response)
       );
