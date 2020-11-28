@@ -270,6 +270,17 @@
     if(localStorage.getItem("grupos") != undefined){
       var parsedJSON = JSON.parse(localStorage.getItem("grupos"));
       this.grupos = parsedJSON;
+    }else{
+      const reqOptions = {
+        method: "GET",
+        headers: { "Content-Type": "application/json" }
+      };
+      //fetch("https://lista-compra-casa.herokuapp.com/api/grupos", reqOptions).then((response) =>{
+     fetch("http://localhost:8081/api/grupos", reqOptions).then((response) =>{
+        console.log(response)
+        this.grupos = JSON.parse(response);
+      }
+      );
     }
   }
 };

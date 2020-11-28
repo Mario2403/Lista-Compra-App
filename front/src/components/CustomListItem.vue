@@ -31,13 +31,18 @@
 <script>
 export default {
   name: "CustomListItem",
-  props: ["modelo"],
+  props: ["modelo", "saveElements"],
   methods: {
     incrementQty(child) {
       child.qty++;
+      this.saveElements();
+
     },
     decrementQty(child) {
-      if (child.qty > 0) child.qty -= 1;
+      if (child.qty > 0){
+         child.qty -= 1;
+          this.saveElements();
+      }
     },
   },
 };
