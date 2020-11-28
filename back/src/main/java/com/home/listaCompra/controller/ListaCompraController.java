@@ -6,6 +6,8 @@ import com.home.listaCompra.model.frontJson.Grupos;
 import com.home.listaCompra.model.frontJson.Item;
 import com.home.listaCompra.model.json.ResponseJSON;
 import com.home.listaCompra.service.ListaService;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -30,7 +32,7 @@ public class ListaCompraController {
 
     @CrossOrigin
     @GetMapping("/api/grupos")
-    public String getGrupos(){
+    public ResponseEntity getGrupos(){
 
         Grupos grupos = new Grupos();
 
@@ -45,7 +47,8 @@ public class ListaCompraController {
                 new Item("Gallos")));
 
         String gson = new Gson().toJson(grupos);
-        return gson;
+        ResponseEntity response = new ResponseEntity(gson, HttpStatus.OK);
+        return response;
     }
 
 
