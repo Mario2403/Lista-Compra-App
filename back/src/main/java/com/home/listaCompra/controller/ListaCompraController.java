@@ -1,9 +1,11 @@
 package com.home.listaCompra.controller;
 
 import com.google.gson.Gson;
+import com.home.listaCompra.cache.GruposCache;
 import com.home.listaCompra.model.frontJson.GrupoBuilder;
 import com.home.listaCompra.model.frontJson.Grupos;
 import com.home.listaCompra.model.frontJson.Item;
+import com.home.listaCompra.model.json.AddGrupoJSON;
 import com.home.listaCompra.model.json.ResponseJSON;
 import com.home.listaCompra.service.ListaService;
 import org.springframework.http.HttpStatus;
@@ -32,23 +34,18 @@ public class ListaCompraController {
 
     @CrossOrigin
     @GetMapping("/api/grupos")
-    public ResponseEntity getGrupos(){
+    public ResponseEntity<String> getGrupos(){
 
-        Grupos grupos = new Grupos();
+        GruposCache grupos = GruposCache.getInstance();
+        return new ResponseEntity<>(new Gson().toJson(grupos), HttpStatus.OK);
+    }
 
-        grupos.addGrupo(GrupoBuilder.buildGrupo("CARNICERIA", "mdi-food-drumstick",
-                new Item("Carne Picada"),
-                new Item("Filetes de pollo"),
-                new Item("Filetes cinta de lomo")));
+    @CrossOrigin
+    @PostMapping("/api/addGrupo")
+    public String addGrupo(@RequestBody AddGrupoJSON addGrupoJSON){
 
-        grupos.addGrupo(GrupoBuilder.buildGrupo("PESCADERIA", "mdi-fish",
-                new Item("Salmón"),
-                new Item("Pescanova"),
-                new Item("Gallos")));
-
-        String gson = new Gson().toJson(grupos);
-        ResponseEntity response = new ResponseEntity(gson, HttpStatus.OK);
-        return response;
+        GruposCache.getInstance().addToGrupo(addGrupoJSON.getGrupoName(), addGrupoJSON.getItemName());
+        return "OK";
     }
 
 
