@@ -132,8 +132,8 @@
   },
   data() {
     return {
-      grupos: [
-        {
+      grupos: [],
+       /* {
           title: "CARNICERÍA",
           icon: "mdi-food-drumstick",
           items: [
@@ -194,9 +194,9 @@
           items: [
             { title: "Cruesli", qty: 0 },
             { title: "Patatas fritas", qty: 0 },
-          ],
+          ], 
         },
-      ],
+      ],*/
       textField: "",
       elements: [],
       showModal: false,
@@ -253,8 +253,18 @@
     addNewItem() {
       console.log(this.typeSelected);
       console.log(this.textField);
-      this.typeSelected.items.push({ title: this.textField, qty: 0 });
+      this.typeSelected.items.push({ title: this.textField, qty: 1 });
       this.showModal = false;
+
+      const reqOptions = {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: {"grupoName": this.typeSelected.title, "itemName": this.textField}
+      };
+      //fetch("https://lista-compra-casa.herokuapp.com/api/grupos", reqOptions).then((response) =>{
+     fetch("https://lista-compra-casa.herokuapp.com/api/addGrupo", reqOptions)
+     .then((response) => console.log(response))
+  
     },
     clearModal() {
       this.textField = "";
@@ -264,7 +274,7 @@
       console.log("Save elements!")
       var saveJSON = JSON.stringify(this.grupos);
       localStorage.setItem("grupos", saveJSON)
-    }
+    },
   },
   mounted() {
     if(localStorage.getItem("grupos") != undefined){
@@ -276,11 +286,9 @@
         headers: { "Content-Type": "application/json" }
       };
       //fetch("https://lista-compra-casa.herokuapp.com/api/grupos", reqOptions).then((response) =>{
-     fetch("https://lista-compra-casa.herokuapp.com/api/grupos", reqOptions).then((response) =>{
-        console.log(response)
-        this.grupos = JSON.parse(response);
-      }
-      );
+     fetch("https://lista-compra-casa.herokuapp.com/api/grupos", reqOptions)
+     .then((response) => response.json())
+     .then((data) => {console.log(data); this.grupos = data.grupos})      
     }
   }
 };
