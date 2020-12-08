@@ -98,10 +98,8 @@ public class GruposCache {
                     new Item("Pimientos rellenos bacalao")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("VARIOS", "mdi-dice-multiple",
-                    new Item("Palitos de Cangrejo"),
-                    new Item("Pescanova"),
-                    new Item("Pimientos rellenos bacalao")));
-
+                    new Item("Cruesli"),
+                    new Item("Patatas Fritas")));
             gruposCache.setGrupos(gruposGson);
         } else {
             gruposCache.setGrupos(new Gson().fromJson(line, Grupos.class));
