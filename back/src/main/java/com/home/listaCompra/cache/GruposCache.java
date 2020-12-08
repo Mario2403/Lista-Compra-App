@@ -83,7 +83,7 @@ public class GruposCache {
                     new Item("Pescanova"),
                     new Item("Pimientos rellenos bacalao")));
 
-            gruposGson.addGrupo(GrupoBuilder.buildGrupo("DROGUERÍA", "mdi-snowflake",
+            gruposGson.addGrupo(GrupoBuilder.buildGrupo("DROGUERÍA", "mdi-lotion",
                     new Item("Don Limpio Baño"),
                     new Item("Friegasuelos"),
                     new Item("Amoníaco"),
@@ -92,7 +92,7 @@ public class GruposCache {
                     new Item("Jabón lavadora"),
                     new Item("Suavizante")));
 
-            gruposGson.addGrupo(GrupoBuilder.buildGrupo("CONSERVAS", "mdi-snowflake",
+            gruposGson.addGrupo(GrupoBuilder.buildGrupo("CONSERVAS", "mdi-cup-outline",
                     new Item("Palitos de Cangrejo"),
                     new Item("Pescanova"),
                     new Item("Pimientos rellenos bacalao")));

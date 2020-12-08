@@ -24,7 +24,7 @@
                   <v-row>
                     <v-col>
                       <v-text-field label="Nombre" v-model="textField">
-                     ma </v-text-field>
+                      </v-text-field>
                     </v-col>
                   </v-row>
                   <v-row>
@@ -90,7 +90,10 @@
               class="no-pad"
               height="20"
             >
-              <CustomListItem v-bind:modelo="child" :saveElements="saveElements"/>
+              <CustomListItem
+                v-bind:modelo="child"
+                :saveElements="saveElements"
+              />
             </v-list-item>
           </v-list-group>
         </v-list>
@@ -110,11 +113,16 @@
             </v-btn>
           </template>
           <v-card class="pa-2">
-            <v-card-title class="headline justify-center">Información</v-card-title>
-                        <v-card-text style="text-align: center;">Lista de la compra APP  <br/>V.1.0</v-card-text>
+            <v-card-title class="headline justify-center"
+              >Información</v-card-title
+            >
+            <v-card-text style="text-align: center"
+              >Lista de la compra APP <br />V.1.0</v-card-text
+            >
 
-            <v-card-subtitle style="text-align: center;">®Mario Jurado Soba  -  2020</v-card-subtitle>
-            
+            <v-card-subtitle style="text-align: center"
+              >®Mario Jurado Soba - 2020</v-card-subtitle
+            >
           </v-card>
         </v-dialog>
       </v-col>
@@ -123,9 +131,9 @@
 </template>
 
 <script>
-    import CustomListItem from "./CustomListItem.vue";
+import CustomListItem from "./CustomListItem.vue";
 
-    export default {
+export default {
   name: "ShoppingList",
   components: {
     CustomListItem,
@@ -133,7 +141,7 @@
   data() {
     return {
       grupos: [],
-       /* {
+      /* {
           title: "CARNICERÍA",
           icon: "mdi-food-drumstick",
           items: [
@@ -246,9 +254,10 @@
         body: JSON.stringify(postBody),
       };
       console.log("https://lista-compra-casa.herokuapp.com/api/list");
-      fetch("https://lista-compra-casa.herokuapp.com/api/list", reqOptions).then((response) =>
-        console.log(response)
-      );
+      fetch(
+        "https://lista-compra-casa.herokuapp.com/api/list",
+        reqOptions
+      ).then((response) => console.log(response));
     },
     addNewItem() {
       console.log(this.typeSelected);
@@ -259,38 +268,41 @@
       const reqOptions = {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: {"grupoName": this.typeSelected.title, "itemName": this.textField}
+        body: { grupoName: this.typeSelected.title, itemName: this.textField },
       };
       //fetch("https://lista-compra-casa.herokuapp.com/api/grupos", reqOptions).then((response) =>{
-     fetch("https://lista-compra-casa.herokuapp.com/api/addGrupo", reqOptions)
-     .then((response) => console.log(response))
-  
+      fetch(
+        "https://lista-compra-casa.herokuapp.com/api/addGrupo",
+        reqOptions
+      ).then((response) => console.log(response));
     },
     clearModal() {
       this.textField = "";
       this.typeSelected = { title: "", icon: "" };
     },
-    saveElements(){
-      console.log("Save elements!")
+    saveElements() {
+      console.log("Save elements!");
       var saveJSON = JSON.stringify(this.grupos);
-      localStorage.setItem("grupos", saveJSON)
+      localStorage.setItem("grupos", saveJSON);
     },
   },
-  mounted() {
-    if(localStorage.getItem("grupos") != undefined){
+  created() {
+    if (localStorage.getItem("grupos") != undefined) {
+      console.log("if grupos");
       var parsedJSON = JSON.parse(localStorage.getItem("grupos"));
       this.grupos = parsedJSON;
-    }else{
+    } else {
       const reqOptions = {
         method: "GET",
-        headers: { "Content-Type": "application/json" }
+        headers: { "Content-Type": "application/json" },
       };
-      //fetch("https://lista-compra-casa.herokuapp.com/api/grupos", reqOptions).then((response) =>{
-     fetch("https://lista-compra-casa.herokuapp.com/api/grupos", reqOptions)
+           fetch("https://lista-compra-casa.herokuapp.com/api/grupos", reqOptions)
      .then((response) => response.json())
-     .then((data) => this.grupos = data.grupos)
+     .then((data) => this.grupos = data.grupos.grupos)
+
+      //var url = "https://lista-compra-casa.herokuapp.com/api/grupos";
     }
-  }
+  },
 };
 </script>
 
