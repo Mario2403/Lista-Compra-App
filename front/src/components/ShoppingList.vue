@@ -288,7 +288,7 @@
       //fetch("https://lista-compra-casa.herokuapp.com/api/grupos", reqOptions).then((response) =>{
      fetch("https://lista-compra-casa.herokuapp.com/api/grupos", reqOptions)
      .then((response) => response.json())
-     .then((data) => {console.log(data); this.grupos = data.grupos})      
+     .then((data) => this.grupos = data.grupos)
     }
   }
 };
