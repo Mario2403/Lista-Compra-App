@@ -80,7 +80,6 @@ public class GruposCache {
                     new Item("Melocotones"),
                     new Item("Mandarinas"),
                     new Item("Naranjas"),
-                    new Item("Limones"),
                     new Item("Sandía"),
                     new Item("Melón")));
 
@@ -113,6 +112,7 @@ public class GruposCache {
                     new Item("Judías verdes"),
                     new Item("Cebollas"),
                     new Item("Ajos"),
+                    new Item("Limones"),
                     new Item("Brócoli"),
                     new Item("Patatas"),
                     new Item("Bolsa de lechuga"),
