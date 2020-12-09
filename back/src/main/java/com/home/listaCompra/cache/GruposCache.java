@@ -46,7 +46,9 @@ public class GruposCache {
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("CARNICERIA", "mdi-food-drumstick",
                     new Item("Carne Picada"),
                     new Item("Filetes de pollo"),
-                    new Item("Filetes cinta de lomo")));
+                    new Item("Morcilla"),
+                    new Item("Cinta de lomo adobada"),
+                    new Item("Cinta de lomo fresca")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("PESCADERIA", "mdi-fish",
                     new Item("Salmón"),
@@ -61,6 +63,7 @@ public class GruposCache {
                     new Item("Melocotones"),
                     new Item("Mandarinas"),
                     new Item("Naranjas"),
+                    new Item("Limones"),
                     new Item("Sandía"),
                     new Item("Melón")));
 
@@ -68,19 +71,27 @@ public class GruposCache {
                     new Item("Pan Sebas"),
                     new Item("Pan integral"),
                     new Item("Pan rallado"),
+                    new Item("Pan de salchichas"),
                     new Item("Pan de molde")));
 
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("VERDULERÍA", "mdi-seed",
-                    new Item("Pimientos"),
+                    new Item("Pimiento verde"),
+                    new Item("Pimiento rojo"),
                     new Item("Judías verdes"),
                     new Item("Cebollas"),
                     new Item("Brócoli"),
+                    new Item("Patatas"),
+                    new Item("Bolsa de lechuga"),
+                    new Item("Calabacín"),
+                    new Item("Berenjena"),
                     new Item("Lechuga")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("CONGELADOS", "mdi-snowflake",
                     new Item("Palitos de Cangrejo"),
                     new Item("Pescanova"),
+                    new Item("Empanadillas La Cocinera"),
+                    new Item("Croquetas bacalao La Cocinera"),
                     new Item("Pimientos rellenos bacalao")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("DROGUERÍA", "mdi-lotion",
@@ -88,17 +99,43 @@ public class GruposCache {
                     new Item("Friegasuelos"),
                     new Item("Amoníaco"),
                     new Item("Lejía"),
-                    new Item("Cápsulas lavavajillas"),
+                    new Item("Pastillas lavavajillas"),
                     new Item("Jabón lavadora"),
                     new Item("Suavizante")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("CONSERVAS", "mdi-cup-outline",
-                    new Item("Palitos de Cangrejo"),
-                    new Item("Pescanova"),
+                    new Item("Tomate frito"),
+                    new Item("Tomate triturado natural"),
                     new Item("Pimientos rellenos bacalao")));
+
+            gruposGson.addGrupo(GrupoBuilder.buildGrupo("LÁCTEOS", "mdi-cow",
+                    new Item("Bebida de avena"),
+                    new Item("Leche Sebas"),
+                    new Item("Zumo blanco"),
+                    new Item("Yogures Activia"),
+                    new Item("Danacol"),
+                    new Item("Densia"),
+                    new Item("Yogures Mario")));
+
+            gruposGson.addGrupo(GrupoBuilder.buildGrupo("LEGUMBRES Y PASTAS", "mdi-cow",
+                    new Item("Lentejas"),
+                    new Item("Arroz"),
+                    new Item("Macarrones"),
+                    new Item("Espaguettis"),
+                    new Item("Harina"),
+                    new Item("Garbanzos")));
+
+            gruposGson.addGrupo(GrupoBuilder.buildGrupo("Embutidos", "mdi-pig",
+                    new Item("Pavo Mario"),
+                    new Item("Chorizo Loli"),
+                    new Item("Fuet"),
+                    new Item("Salchichas")));
+
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("VARIOS", "mdi-dice-multiple",
                     new Item("Cruesli"),
+                    new Item("Huevos"),
+                    new Item("Aceite de oliva"),
                     new Item("Patatas Fritas")));
             gruposCache.setGrupos(gruposGson);
         } else {
