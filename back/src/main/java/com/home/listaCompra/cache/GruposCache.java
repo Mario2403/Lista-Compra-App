@@ -21,9 +21,9 @@ public class GruposCache {
 
     public synchronized static GruposCache getInstance() {
 
-            if (instance == null) {
-                instance = initGrupos();
-            }
+        if (instance == null) {
+            instance = initGrupos();
+        }
 
         return instance;
     }
@@ -52,12 +52,29 @@ public class GruposCache {
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("PESCADERIA", "mdi-fish",
                     new Item("Salmón"),
-                    new Item("Pescanova"),
+                    new Item("Rodaja bonito"),
+                    new Item("Filete bacalao"),
+                    new Item("Lomos de caballa"),
+                    new Item("Bacaladitos"),
+                    new Item("Emperador"),
+                    new Item("Boquerones"),
                     new Item("Gallos")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("FRUTERÍA", "mdi-food-apple",
                     new Item("Plátanos"),
                     new Item("Peras"),
+                    new Item("Arándanos"),
+                    new Item("Frambuesas"),
+                    new Item("Uvas rojas"),
+                    new Item("Piña"),
+                    new Item("Granada"),
+                    new Item("Naranjas"),
+                    new Item("Kiwis"),
+                    new Item("Moras"),
+                    new Item("Aguacate"),
+                    new Item("Chirimoya"),
+                    new Item("Papaya"),
+                    new Item("Mango"),
                     new Item("Manzanas"),
                     new Item("Ciruelas"),
                     new Item("Melocotones"),
@@ -72,14 +89,28 @@ public class GruposCache {
                     new Item("Pan integral"),
                     new Item("Pan rallado"),
                     new Item("Pan de salchichas"),
-                    new Item("Pan de molde")));
+                    new Item("Pan de molde"),
+                    new Item("Galletas"),
+                    new Item("Achicoria"),
+                    new Item("Chocolate negro"),
+                    new Item("Tostadas integrales")));
 
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("VERDULERÍA", "mdi-seed",
                     new Item("Pimiento verde"),
                     new Item("Pimiento rojo"),
+                    new Item("Espinacas"),
+                    new Item("Coliflor"),
+                    new Item("Repollo"),
+                    new Item("Acelgas"),
+                    new Item("Remolacha"),
+                    new Item("col rizada"),
+                    new Item("Tomates"),
+                    new Item("Berros"),
+                    new Item("Cebolletas"),
                     new Item("Judías verdes"),
                     new Item("Cebollas"),
+                    new Item("Ajos"),
                     new Item("Brócoli"),
                     new Item("Patatas"),
                     new Item("Bolsa de lechuga"),
@@ -99,47 +130,83 @@ public class GruposCache {
                     new Item("Papel de cocina"),
                     new Item("Papel higiénico Loli"),
                     new Item("Papel higiénico"),
+                    new Item("Bolsa plástico bocadillo"),
+                    new Item("Lavavajillas Mistol"),
+                    new Item("Balletas"),
+                    new Item("Estropajos"),
+                    new Item("Mochos fregona"),
+                    new Item("Servilletas"),
                     new Item("Friegasuelos"),
                     new Item("Amoníaco"),
+                    new Item("Sanitol"),
+                    new Item("Papel WC húmedo"),
+                    new Item("Jabón tocador"),
+                    new Item("Detergente líquido Dixan"),
                     new Item("Lejía"),
                     new Item("Pastillas lavavajillas"),
                     new Item("Jabón lavadora"),
-                    new Item("Suavizante")));
+                    new Item("Suavizante Vernel")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("CONSERVAS", "mdi-cup-outline",
                     new Item("Tomate frito"),
-                    new Item("Tomate triturado natural"),
-                    new Item("Pimientos rellenos bacalao")));
+                    new Item("Pimientos rojos bote"),
+                    new Item("Latas sardinas"),
+                    new Item("Latas atun"),
+                    new Item("Latas mejillones"),
+                    new Item("Latas berberechos"),
+                    new Item("Lata callos"),
+                    new Item("Fabada litoral"),
+                    new Item("Tomate triturado natural")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("LÁCTEOS", "mdi-cow",
-                    new Item("Bebida de avena"),
+                    new Item("Leche Loli"),
                     new Item("Leche Sebas"),
                     new Item("Zumo blanco"),
                     new Item("Yogures Activia"),
-                    new Item("Danacol"),
-                    new Item("Densia"),
+                    new Item("Danacol botecitos"),
+                    new Item("Densia botecitos"),
                     new Item("Yogures Mario")));
 
-            gruposGson.addGrupo(GrupoBuilder.buildGrupo("LEGUMBRES Y PASTAS", "mdi-cow",
+            gruposGson.addGrupo(GrupoBuilder.buildGrupo("LEGUMBRES Y PASTAS", "mdi-barley",
                     new Item("Lentejas"),
                     new Item("Arroz"),
-                    new Item("Macarrones"),
+                    new Item("Macarrones pluma 6"),
                     new Item("Espaguettis"),
-                    new Item("Harina"),
+                    new Item("Harina integral"),
                     new Item("Garbanzos")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("EMBUTIDOS", "mdi-pig",
                     new Item("Pavo Mario"),
                     new Item("Chorizo Loli"),
                     new Item("Fuet"),
-                    new Item("Salchichas")));
+                    new Item("Salchichas"),
+                    new Item("Lomo embuchado"),
+                    new Item("Queso de cabra"),
+                    new Item("Queso havarti"),
+                    new Item("Queso fresco"),
+                    new Item("Queso cottage"),
+                    new Item("Queso kefir"),
+                    new Item("Queso Tofu"),
+                    new Item("Queso parmesano"),
+                    new Item("Queso feta"),
+                    new Item("Queso brie"),
+                    new Item("Queso gouda"),
+                    new Item("Queso edam")));
 
+            gruposGson.addGrupo(GrupoBuilder.buildGrupo("FRUTOS SECOS", "mdi-peanut",
+                    new Item("Almendras"),
+                    new Item("Nueces"),
+                    new Item("Pistachos"),
+                    new Item("Patatas fritas"),
+                    new Item("Avellanas"),
+                    new Item("Patatas fritas"),
+                    new Item("Pipas")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("VARIOS", "mdi-dice-multiple",
                     new Item("Cruesli"),
                     new Item("Huevos"),
-                    new Item("Aceite de oliva"),
-                    new Item("Patatas Fritas")));
+                    new Item("Aceite de oliva")));
+
             gruposCache.setGrupos(gruposGson);
         } else {
             gruposCache.setGrupos(new Gson().fromJson(line, Grupos.class));
@@ -157,16 +224,16 @@ public class GruposCache {
             line = raf.readLine();
 
 
-        if (line != null && !line.equals("")) {
+            if (line != null && !line.equals("")) {
 
-            gruposResponse = new Gson().fromJson(line, Grupos.class);
-            gruposResponse.addItemToGrupo(grupoName, item);
+                gruposResponse = new Gson().fromJson(line, Grupos.class);
+                gruposResponse.addItemToGrupo(grupoName, item);
 
-        }
+            }
 
-        raf.setLength(0);
-        raf.writeBytes(new Gson().toJson(gruposResponse));
-        raf.close();
+            raf.setLength(0);
+            raf.writeBytes(new Gson().toJson(gruposResponse));
+            raf.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
