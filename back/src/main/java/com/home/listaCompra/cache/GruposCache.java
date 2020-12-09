@@ -93,6 +93,7 @@ public class GruposCache {
                     new Item("Galletas"),
                     new Item("Achicoria"),
                     new Item("Chocolate negro"),
+                    new Item("Chocolatinas"),
                     new Item("Tostadas integrales")));
 
 
@@ -104,7 +105,7 @@ public class GruposCache {
                     new Item("Repollo"),
                     new Item("Acelgas"),
                     new Item("Remolacha"),
-                    new Item("col rizada"),
+                    new Item("Col rizada"),
                     new Item("Tomates"),
                     new Item("Berros"),
                     new Item("Cebolletas"),
@@ -136,7 +137,7 @@ public class GruposCache {
                     new Item("Estropajos"),
                     new Item("Mochos fregona"),
                     new Item("Servilletas"),
-                    new Item("Friegasuelos"),
+                    new Item("Líquido suelos"),
                     new Item("Amoníaco"),
                     new Item("Sanitol"),
                     new Item("Papel WC húmedo"),
@@ -144,7 +145,6 @@ public class GruposCache {
                     new Item("Detergente líquido Dixan"),
                     new Item("Lejía"),
                     new Item("Pastillas lavavajillas"),
-                    new Item("Jabón lavadora"),
                     new Item("Suavizante Vernel")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("CONSERVAS", "mdi-cup-outline",
@@ -163,8 +163,8 @@ public class GruposCache {
                     new Item("Leche Sebas"),
                     new Item("Zumo blanco"),
                     new Item("Yogures Activia"),
-                    new Item("Danacol botecitos"),
-                    new Item("Densia botecitos"),
+                    new Item("Botecitos Densia"),
+                    new Item("Botecitos Danacol"),
                     new Item("Yogures Mario")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("LEGUMBRES Y PASTAS", "mdi-barley",
@@ -185,6 +185,7 @@ public class GruposCache {
                     new Item("Queso havarti"),
                     new Item("Queso fresco"),
                     new Item("Queso cottage"),
+                    new Item("Queso cabaña"),
                     new Item("Queso kefir"),
                     new Item("Queso Tofu"),
                     new Item("Queso parmesano"),
