@@ -94,6 +94,7 @@ public class GruposCache {
                     new Item("Achicoria"),
                     new Item("Chocolate negro"),
                     new Item("Chocolatinas"),
+                    new Item("Cereales Cruesli"),
                     new Item("Tostadas integrales")));
 
 
@@ -204,7 +205,6 @@ public class GruposCache {
                     new Item("Pipas")));
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("VARIOS", "mdi-dice-multiple",
-                    new Item("Cruesli"),
                     new Item("Huevos"),
                     new Item("Aceite de oliva")));
 

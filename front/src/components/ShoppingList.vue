@@ -92,12 +92,11 @@
             >
               <CustomListItem
                 v-bind:modelo="child"
-                :saveElements="saveElements"
               />
             </v-list-item>
           </v-list-group>
         </v-list>
-        <!-- FIN LSITA DE ELEMENTOS -->
+        <!-- FIN LISTA DE ELEMENTOS -->
       </v-col>
     </v-row>
     <v-row>
@@ -280,18 +279,10 @@ export default {
       this.textField = "";
       this.typeSelected = { title: "", icon: "" };
     },
-    saveElements() {
-      console.log("Save elements!");
-      var saveJSON = JSON.stringify(this.grupos);
-      localStorage.setItem("grupos", saveJSON);
-    },
+
   },
   created() {
-    if (localStorage.getItem("grupos") != undefined) {
-      console.log("if grupos");
-      var parsedJSON = JSON.parse(localStorage.getItem("grupos"));
-      this.grupos = parsedJSON;
-    } else {
+
       const reqOptions = {
         method: "GET",
         headers: { "Content-Type": "application/json" },
@@ -299,9 +290,6 @@ export default {
            fetch("https://lista-compra-casa.herokuapp.com/api/grupos", reqOptions)
      .then((response) => response.json())
      .then((data) => this.grupos = data.grupos.grupos)
-
-      //var url = "https://lista-compra-casa.herokuapp.com/api/grupos";
-    }
   },
 };
 </script>
