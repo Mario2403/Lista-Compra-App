@@ -20,7 +20,7 @@ public class MailService {
 
         ArrayList<String> recipients = new ArrayList<>();
         recipients.add("mariojuso2011@gmail.com");
-        //recipients.add("loliso1310@gmail.com");
+        recipients.add("loliso1310@gmail.com");
 
         // Assuming you are sending email from through gmails smtp
         String host = "smtp.gmail.com";
