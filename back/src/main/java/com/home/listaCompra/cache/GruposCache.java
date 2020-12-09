@@ -96,6 +96,9 @@ public class GruposCache {
 
             gruposGson.addGrupo(GrupoBuilder.buildGrupo("DROGUERÍA", "mdi-lotion",
                     new Item("Don Limpio Baño"),
+                    new Item("Papel de cocina"),
+                    new Item("Papel higiénico Loli"),
+                    new Item("Papel higiénico"),
                     new Item("Friegasuelos"),
                     new Item("Amoníaco"),
                     new Item("Lejía"),
@@ -125,7 +128,7 @@ public class GruposCache {
                     new Item("Harina"),
                     new Item("Garbanzos")));
 
-            gruposGson.addGrupo(GrupoBuilder.buildGrupo("Embutidos", "mdi-pig",
+            gruposGson.addGrupo(GrupoBuilder.buildGrupo("EMBUTIDOS", "mdi-pig",
                     new Item("Pavo Mario"),
                     new Item("Chorizo Loli"),
                     new Item("Fuet"),
